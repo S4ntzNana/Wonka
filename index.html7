@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Coisinhas que me lembram você 💕</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #f8cdda, #fbb1bd);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    h1 {
+      color: #4b2e2e;
+      margin-bottom: 40px;
+      font-size: 28px;
+    }
+
+    .container {
+      display: flex;
+      gap: 30px;
+    }
+
+    .card {
+      width: 180px;
+      height: 180px;
+      background: #f7a9b8;
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 40px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+      position: relative;
+    }
+
+    .card:hover {
+      transform: scale(1.1);
+      background: #ff8fa3;
+    }
+
+    .card span {
+      position: absolute;
+      bottom: 10px;
+      font-size: 14px;
+      color: #fff;
+      opacity: 0;
+      transition: 0.3s;
+    }
+
+    .card:hover span {
+      opacity: 1;
+    }
+
+    /* Botão de música */
+    .music-btn {
+      margin-top: 40px;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 20px;
+      background: #ff8fa3;
+      color: white;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .music-btn:hover {
+      background: #ff6f91;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>Coisinhas que me lembram vc &lt;3</h1>
+
+  <div class="container">
+    <div class="card" onclick="alert('Você 💕')">
+      🐱
+      <span>fofo igual vc</span>
+    </div>
+
+    <div class="card" onclick="alert('Nossa música 🎶')">
+      🎵
+      <span>nossa vibe</span>
+    </div>
+  </div>
+
+  <!-- Música -->
+  <audio id="musica" loop>
+    <source src="musica.mp3" type="audio/mpeg">
+  </audio>
+
+  <button class="music-btn" onclick="tocarMusica()">
+    🎧 Tocar música
+  </button>
+
+  <script>
+    function tocarMusica() {
+      const musica = document.getElementById("musica");
+      musica.play();
+    }
+  </script>
+
+</body>
+</html>
