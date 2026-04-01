@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Gatinhos 🐱💗</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #ffd6e0;
+      text-align: center;
+    }
+
+    h1 {
+      margin: 20px;
+      color: #5a2e3a;
+    }
+
+    .galeria {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 15px;
+      padding: 20px;
+    }
+
+    .galeria img {
+      width: 100%;
+      border-radius: 15px;
+      transition: 0.3s;
+    }
+
+    .galeria img:hover {
+      transform: scale(1.05);
+    }
+
+    .voltar {
+      margin: 20px;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 20px;
+      background: #ff8fa3;
+      color: white;
+      cursor: pointer;
+    }
+
+    .voltar:hover {
+      background: #ff6f91;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>Gatinhos que me lembram você 🐱💗</h1>
+
+  <div class="galeria">
+    <img src="https://media.giphy.com/media/JIX9t2j0ZTN9S/giphy.gif">
+    <img src="https://media.giphy.com/media/mlvseq9yvZhba/giphy.gif">
+    <img src="https://media.giphy.com/media/13borq7Zo2kulO/giphy.gif">
+    <img src="https://media.giphy.com/media/ICOgUNjpvO0PC/giphy.gif">
+    <img src="https://media.giphy.com/media/3oriO0OEd9QIDdllqo/giphy.gif">
+    <img src="https://media.giphy.com/media/MDJ9IbxxvDUQM/giphy.gif">
+  </div>
+
+  <button class="voltar" onclick="window.location.href='index.html'">
+    ← Voltar
+  </button>
+
+</body>
+</html>
