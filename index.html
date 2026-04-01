@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Coisinhas 💕</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #e6a9b8;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    h1 {
+      margin-bottom: 40px;
+      font-size: 22px;
+      color: #000;
+    }
+
+    .container {
+      display: flex;
+      gap: 20px;
+    }
+
+    .box {
+      width: 180px;
+      height: 140px;
+      background-color: #d98fa2;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+
+    /* desenhos simples estilo wireframe */
+    .cat::before {
+      content: "≽^•⩊•^≼";
+      font-size: 22px;
+    }
+
+    .legs::before {
+      content: "૮₍ ˃ ⤙ ˂ ₎ა";
+      font-size: 20px;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <h1>Coisinhas que me lembram vc &lt;3</h1>
+
+  <div class="container">
+    <div class="box cat" onclick="window.location.href='pagina1.html'"></div>
+    <div class="box legs" onclick="window.location.href='pagina2.html'"></div>
+  </div>
+
+</body>
+</html>
