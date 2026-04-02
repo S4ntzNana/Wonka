@@ -85,8 +85,8 @@
   <div class="topo"></div>
 
   <div class="card">
-    <h1>Willy</h1>
-    <p>letra da musica aqui 💕</p>
+    <h1>Willy 💕</h1>
+    <p>letra da musica aqui...</p>
   </div>
 
   <div class="player">
@@ -96,8 +96,8 @@
     </div>
   </div>
 
-  <!-- 🎵 Áudio -->
-  <audio id="musica" src="musica.mp3"></audio>
+  <!-- 🎵 SUA MÚSICA -->
+  <audio id="musica" src="willy.mp3"></audio>
 
   <script>
     const musica = document.getElementById("musica");
@@ -118,7 +118,7 @@
       tocando = !tocando;
     }
 
-    // mover barra automaticamente
+    // atualizar barra automaticamente
     musica.addEventListener("timeupdate", () => {
       if (musica.duration) {
         const porcentagem = (musica.currentTime / musica.duration) * 100;
@@ -126,7 +126,7 @@
       }
     });
 
-    // clicar na barra pra pular
+    // clicar na barra
     barra.addEventListener("click", (e) => {
       const largura = barra.clientWidth;
       const cliqueX = e.offsetX;
