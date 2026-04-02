@@ -86,7 +86,7 @@
 
   <div class="card">
     <h1>Willy 💕</h1>
-    <p>letra da musica aqui...</p>
+    <p>letra da música aqui...</p>
   </div>
 
   <div class="player">
@@ -96,31 +96,31 @@
     </div>
   </div>
 
-  <!-- 🎵 SUA MÚSICA -->
-  <audio id="musica" 
-src="https://raw.githubusercontent.com/S4ntzNana/Wonka/main/willy.mp3">
-</audio>
+  <!-- 🎵 ÁUDIO -->
+  <audio id="musica" preload="auto">
+    <source src="https://raw.githubusercontent.com/S4ntzNana/Wonka/main/willy.mp3" type="audio/mpeg">
+  </audio>
 
   <script>
     const musica = document.getElementById("musica");
-    const progresso = document.querySelector(".progresso");
     const botao = document.querySelector(".botao");
+    const progresso = document.querySelector(".progresso");
     const barra = document.querySelector(".barra");
 
-    let tocando = false;
-
     function tocarMusica() {
-      if (tocando) {
+      if (musica.paused) {
+        musica.play().then(() => {
+          botao.innerText = "⏸";
+        }).catch((erro) => {
+          console.log("Erro:", erro);
+          alert("Clica de novo 😭");
+        });
+      } else {
         musica.pause();
         botao.innerText = "▶";
-      } else {
-        musica.play();
-        botao.innerText = "⏸";
       }
-      tocando = !tocando;
     }
 
-    // atualizar barra automaticamente
     musica.addEventListener("timeupdate", () => {
       if (musica.duration) {
         const porcentagem = (musica.currentTime / musica.duration) * 100;
@@ -128,7 +128,6 @@ src="https://raw.githubusercontent.com/S4ntzNana/Wonka/main/willy.mp3">
       }
     });
 
-    // clicar na barra
     barra.addEventListener("click", (e) => {
       const largura = barra.clientWidth;
       const cliqueX = e.offsetX;
